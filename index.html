@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 2 navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- LOGO -->
+        <img src="assets/img/tus_zapas.png" alt="TUS ZAPAS" class="logo">
+        
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="#" class="active">INICIO</a></li>
+                <li><a href="#formLogin">INGRESAR</a></li>
+                <li><a href="#">TENDENCIA</a></li>
+                <li><a href="#">NIÑOS</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+            </ul>
+            
+            <!-- CARRITO -->
+            <img src="assets/cart-shopping-solid.svg" alt="Carrito" class="crto-icon"> 
+        </nav>
+        
+    </header>
+    <!--MAIN-->
+   <main>
+    <section class="hero">
+
+        <div class="home_content">
+            <h1>Tus Zapas</h1>
+            <h3>Pisa fuerte, vive urbano</h3>
+        </div>
+
+    </section>
+    <section id="shoesCards">
+        <h2>ZAPATILLAS DESTACADAS</h2>
+        <div class="container-cards-shoes">
+        
+            <!-- card1 -->
+        <div class="info-cardsShoes">
+            <img src="assets/img/Adidas-Campus.jpeg" alt="Adidas Campus">
+            <h3>ADIDAS CAMPUS</h3>
+            <p>PRECIO: $120.000</p>
+        </div>
+        
+        <!-- card2 -->
+        <div class="info-cardsShoes">
+            <img src="assets/img/jabbar-low" alt="Adidas Campus">
+            <h3>ADIDAS</h3>
+            <p>PRECIO: $120.000</p>
+        </div>
+        
+        <!-- card3 -->
+        <div class="info-cardsShoes">
+            <img src="assets/img/adidas-gazelle-gris" alt="Adidas Campus">
+            <h3>ADIDAS</h3>
+            <p>PRECIO: $120.000</p>
+        </div>
+       </div>
+    </section>
+    <section>
+        <form id="formLogin">
+            <div class="login">
+                <h3>LOG IN</h3>
+                <p>MAIL:</p>
+                <input type="text" class="inputMail">
+                <p>CONTRASEÑA:</p>
+                <input type="password" class="inputPass">
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </section>
+   </main>
+
+</body>
+</html>
