@@ -1,84 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega 2 navbar</title>
+    <title>TUS ZAPAS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="subs" href="subs.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <!-- LOGO -->
-        <img src="assets/img/tus_zapas.png" alt="TUS ZAPAS" class="logo">
-        
+        <img src="assets/img/title_TUS_ZAPAS.png" alt="TUS ZAPAS" class="logo">
+
         <!-- NAVBAR -->
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a href="#" class="active">INICIO</a></li>
+                <li><a href="#hero" class="active">INICIO</a></li>
+                <li><a href="#shoesCards">TENDENCIA</a></li>
                 <li><a href="#formLogin">INGRESAR</a></li>
-                <li><a href="#">TENDENCIA</a></li>
-                <li><a href="#">NIÑOS</a></li>
-                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#aboutUs">NOSOTROS</a></li>
+                <li><a href="#footer">CONTACTANOS</a></li>
             </ul>
-            
+
             <!-- CARRITO -->
-            <img src="assets/cart-shopping-solid.svg" alt="Carrito" class="crto-icon"> 
+            <label for="cart-toggle">
+                <img src="assets/cart-shopping-solid.svg" alt="Carrito" class="crto-icon">
+            </label>
+            <input type="checkbox" id="cart-toggle">
+            <div class="cart">
+                <h2>tus zapas</h2>
+                <!--producto-->
+                <div class="cart-item">
+                    <img src="assets/img/jabbar-low" alt="">
+                <div class="item-info">
+                    <h3 class="item-title">Jabbar Low</h3>
+                    <p class="item-bid">Precio</p>
+                    <span class="item-price">20 USD</span>
+                </div>
+                <div class="item-handler">
+                    <span class="quantity-handler down">-</span>
+                    <span class="item-quantity">1</span>
+                    <span class="quantity-handler up">+</span>
+
+
+                </div>
+
+
+                </div>
+                <div class="cart-item">
+                    <img src="assets/img/Adidas-Campus.jpeg" alt="">
+                <div class="item-info">
+                    <h3 class="item-title">Campus</h3>
+                    <p class="item-bid">Precio</p>
+                    <span class="item-price">80 USD</span>
+                </div>
+                <div class="item-handler">
+                    <span class="quantity-handler down">-</span>
+                    <span class="item-quantity">1</span>
+                    <span class="quantity-handler up">+</span>
+
+
+                </div>
+
+
+                </div>
+                <div class="cart-item">
+                    <img src="assets/img/adidas-gazelle-gris" alt="">
+                <div class="item-info">
+                    <h3 class="item-title">Gazelle</h3>
+                    <p class="item-bid">Precio</p>
+                    <span class="item-price">40 USD</span>
+                </div>
+                <div class="item-handler">
+                    <span class="quantity-handler down">-</span>
+                    <span class="item-quantity">1</span>
+                    <span class="quantity-handler up">+</span>
+
+
+                </div>
+
+
+                </div>
+                
+
+                <span class="divider"></span>
+
+                <div class="cart-total">
+                    <p>TOTAL:</p>
+                    <span>140 USD</span>
+                </div>
+
+                <button class="btn-add">Comprar</button>
+            </div>
         </nav>
-        
+
     </header>
     <!--MAIN-->
-   <main>
-    <section class="hero">
-
-        <div class="home_content">
-            <h1>Tus Zapas</h1>
-            <h3>Pisa fuerte, vive urbano</h3>
-        </div>
-
-    </section>
-    <section id="shoesCards">
-        <h2>ZAPATILLAS DESTACADAS</h2>
-        <div class="container-cards-shoes">
-        
-            <!-- card1 -->
-        <div class="info-cardsShoes">
-            <img src="assets/img/Adidas-Campus.jpeg" alt="Adidas Campus">
-            <h3>ADIDAS CAMPUS</h3>
-            <p>PRECIO: $120.000</p>
-        </div>
-        
-        <!-- card2 -->
-        <div class="info-cardsShoes">
-            <img src="assets/img/jabbar-low" alt="Adidas Campus">
-            <h3>ADIDAS</h3>
-            <p>PRECIO: $120.000</p>
-        </div>
-        
-        <!-- card3 -->
-        <div class="info-cardsShoes">
-            <img src="assets/img/adidas-gazelle-gris" alt="Adidas Campus">
-            <h3>ADIDAS</h3>
-            <p>PRECIO: $120.000</p>
-        </div>
-       </div>
-    </section>
-    <section>
-        <form id="formLogin">
-            <div class="login">
-                <h3>LOG IN</h3>
-                <p>MAIL:</p>
-                <input type="text" class="inputMail">
-                <p>CONTRASEÑA:</p>
-                <input type="password" class="inputPass">
-                <button type="submit">Entrar</button>
+    <main>
+        <section id="hero">
+            <div class="heroContent">
+                <div>
+                    <img src="assets/img/newbalance.png" alt="newbalance">
+                </div>
+                <h1>PROMO NAVIDAD 18 CUOTAS S/INTERES</h1>
             </div>
-        </form>
-    </section>
-   </main>
+        </section>
+        <section id="shoesCards">
+            <h2>ZAPATILLAS DESTACADAS</h2>
+            <div class="container-cards-shoes">
+
+                <!-- card1 -->
+                <div class="info-cardsShoes">
+                    <img src="assets/img/Adidas-Campus.jpeg" alt="Adidas Campus">
+                    <h3>ADIDAS CAMPUS</h3>
+                    <p>PRECIO: 80 USD</p>
+                    <button type="submit">COMPRAR</button>
+
+                </div>
+
+                <!-- card2 -->
+                <div class="info-cardsShoes">
+                    <img src="assets/img/jabbar-low" alt="Adidas Campus">
+                    <h3>ADIDAS JABBAR</h3>
+                    <p>PRECIO: 20 USD</p>
+                    <button type="submit">COMPRAR</button>
+                </div>
+
+                <!-- card3 -->
+                <div class="info-cardsShoes">
+                    <img src="assets/img/adidas-gazelle-gris" alt="Adidas Campus">
+                    <h3>ADIDAS GAZELLE</h3>
+                    <p>PRECIO: 40 USD</p>
+                    <button type="submit">COMPRAR</button>
+
+                </div>
+            </div>
+        </section>
+        <section id="formLogin">
+            <form>
+                <div class="login">
+                    <h3>LOG IN</h3>
+                    <p>MAIL:</p>
+                    <input type="text" class="inputMail">
+                    <p>CONTRASEÑA:</p>
+                    <input type="password" class="inputPass">
+                    <button type="submit">ENTRAR</button>
+                </div>
+            </form>
+            <form>
+                <div class="subs">
+                    <h3>SUSCRÍBETE!!</h3>
+                    <p>APROVECHA LAS INCREIBLES PROMOS SEMANALES</p>
+                    <p>QUE ESPERAS PARA SUMARTE A ESTA GRAN MARCA!!</p>
+                    <p>⬇ ⬇ ⬇</p>
+
+                    <a href="subs.html" class="buttonSubs">SUSCRIBIRSE</a>
+                </div>
+            </form>
+        </section>
+        <section id="aboutUs">
+            <div class="containerAboutUs">
+                <h3>NOSOTROS</h3>
+                <div>
+                    <p>NUESTRA EMPRESA “TUS ZAPAS” COMENZO HACE MUY POCO CON EL FIN DE LLEGAR A MILES DE PERSONAS, CON
+                        ESTILOS DE ZAPATILLAS QUE CONVINEN CON CUALQUIER OUTFIT</p>
+                    <br>
+                    <br>
+                    <p>QUE SEAN COMODAS, ADAPTABLES Y QUE MARQUE UNA BUENA PRIMERA IMPRESION </p>
+                    <br>
+                    <br>
+                    <p>PODES CONTAR CON UN LOCAL EN CADA CUIDAD!!</p>
+                    <br>
+                    <br>
+                    <p>HACE COMO MILES DE PERSONAS Y ELEGI</p>
+                    <br>
+                    <br>
+                    <p><span>"TUS ZAPAS"</span></p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13619.167185280012!2d-64.19854263430435!3d-31.41986197673084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a32dcf5d747f%3A0x40373220b29140ac!2sPatio%20Olmos%20Shopping!5e0!3m2!1ses!2sar!4v1739221351639!5m2!1ses!2sar"
+                class="Maps"></iframe>
+            <div class="footerContainer">
+                <div class="iconContainer">
+                    <ul>
+
+                        <li><img src="assets/img/whatsapp.png" alt="whatsapp">(351) 555 0945</li>
+                        <li><img src="assets/img/instagram.png" alt="instagram">@TUS_ZAPAS_OK</li>
+                        <li><img src="assets/img/twitter.png" alt="twitter">@TUSZAPAS_OK</li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </footer>
+
+    </main>
 
 </body>
+
 </html>

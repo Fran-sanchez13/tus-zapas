@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+}
+
+/*===VARIABLES===*/
+:root{
+    --primary: #648375;
+    --secondary: #174831;
+    --lettering: #F5EFED;
+    --aux: #212228;
+    --bg:#004E29;
+    --colorbg: #E8E8B4;
+}
+
+
+
+/*======PAGE 2=========*/
+
+#heroSubs{
+    background-image: url(assets/img/BACKGORUND\ page\ 2.jpg);
+}
+
+#heroSubs{
+    width: 100%;
+    height: 100vh;
+}
+
+.heroContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register{
+    background-color: var(--bg);
+    width: 400px;
+    height: 400px;
+    padding: 45px;
+    margin-top: 20px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#register img{
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;    
+    width: 100%;
+}
+
+.inputs input{
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid var(--aux);
+    border-radius: 1rem;
+    outline: none;
+    font-family: 'gliker';
+    font-size: 20px;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: 'gliker';
+    font-weight: 700;
+    background-color: white;
+    color: var(--bg);
+    padding: 20px;
+    transition: 0.5s;
+    
+}
+
+.button:hover{
+    background-color: var(--colorbg);
+}

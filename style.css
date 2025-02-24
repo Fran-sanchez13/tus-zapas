@@ -24,6 +24,7 @@
     font-size: 15px;
     font-family: "Oswald", sans-serif;
     letter-spacing: 1px;
+    scrollbar-width: none;
 }
 
 
@@ -36,7 +37,7 @@ header{
     height: 100px;
     width: 100%;
     position: fixed;
-    box-shadow: 2px 3px 10px var(--lettering);
+
     z-index: 5;
     background-color: var(--bg);
 }
@@ -65,20 +66,16 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
     font-weight: 700;
-
+    transition: 0.5s ease-out;
 }
 
 .navbar-list a:hover{
-    background-color: black;
-    border-radius: 8px;
-    padding: 5px;
-}
-
-.navbar-list .active{
-    font-weight: 700;
-    color: var(--colorbg);
+    background-color: var(--colorbg);
+    color: var(--bg);
+    padding: 2px;
+    border-radius: 5px
+    ;
 }
 
 .logo{
@@ -93,46 +90,154 @@ header{
    
 }
 
+#cart-toggle{
+    display: none;
+}
+
+#cart-toggle:checked + .cart{
+    display: flex;
+}
 
 .cart{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: var(--secondary);
+    padding: 50px 30px;
+    border-left: 1px solid var(--lettering2);
+    height: calc(100vh - 100px);
+    color: white;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.cart h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.cart-item{
     display: flex;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--colorbg);
+    border-radius: 10px;
+    background: #232323;
 }
 
-/*====MAIN====*/
-main{
-    background-color: var(--lettering);
+.cart-item img{
+    border-radius: 5px;
+    width: 80px;
 }
 
-.hero{
-    height: 100vh;
+.item-title{
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.item-bid{
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    color: white;
+    font-weight: 800;
+}
+
+.item-handler{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+.quantity-handler{
+    padding: 2px 8px;
+    border: 1px solid var(--colorbg);
+    border-radius: 5px;
 }
 
-.home_content{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    flex-direction: column;
+.down{
+    background-color: var(--lettering2);
 }
 
-.home_content h1{
-    color: var(--bg);
-    font-size: 185px;
-    font-family: 'gluten';
-    font-weight: 500;
-    filter: drop-shadow(8px 8px 4px black)
+.item-quantity{
+    color: var(--lettering);
 }
 
-.home_content h3{
-    font-family: 'gluten';
-    font-size: 30px;
+
+.btn-add{
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 5px;
+    transition: 0.5s;
+    font-family: 'gliker';
     font-weight: 600;
-    filter: drop-shadow(8px 8px 4px grey)
+    font-size: 20px;
+    color: var(--bg);
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background-color: var(--colorbg);
+}
+
+.divider{
+    margin-top: 20px;
+    border: 1px solid var(--colorbg);
+}
+
+.cart-total{
+    display: flex;
+    color: var(--lettering);
+    justify-content: space-between;
+    font-family: 'gliker';
+    font-weight: 600;
 
 }
+
+
+/*====HERO====*/
+
+main{
+    background-color: var(--colorbg);
+    width: 100%;
+}
+
+
+.heroContent{
+    display: flex;
+}
+
+.heroContent h1{
+    font-size: 100px;
+    font-family: 'gliker';
+    font-weight: 700;
+    padding-top: 100px;
+    color: var(--bg);
+    margin: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;    
+}
+
+.heroContent img {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    border-radius: 0px 0px 1rem 0px;
+    
+}
+
+
+
 /* ===section2===== */
 
 #shoesCards{
@@ -146,11 +251,14 @@ main{
 }
 
 #shoesCards h2{
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'gluten';
     padding: 40px;
     font-weight: 700;
     font-family: 'gliker';
+    color: var(--bg);
+    text-shadow: 2px 2px 4px black;    
+
 }
 
 .container-cards-shoes{
@@ -170,7 +278,13 @@ main{
     align-items: center;
     justify-content: end;
     color: var(--colorbg);
-    
+    box-shadow: 0px 0px 20px white;  
+    transition: 0.5s ease-out;
+}
+
+.info-cardsShoes:hover{
+    transform: scale(1.1);
+
 }
 
 .info-cardsShoes h3{
@@ -193,9 +307,29 @@ main{
     border-radius: 1rem;
 }
 
+
+.info-cardsShoes button{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    color: var(--bg);
+    font-family: 'gliker';
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+.info-cardsShoes button:hover{
+    background-color: var(--colorbg);
+    transform: scale(1.2);
+}
+
+/* ===================LOGIN============ */
+
 #formLogin{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
 
@@ -211,6 +345,50 @@ main{
     display: flex;
     flex-direction: column;
  }
+
+ .subs{
+    background-color: var(--bg);
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    padding: 45px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .subs h3{
+    font-size: 35px;
+    font-family: 'gliker';
+    display: flex;
+    justify-content: center;
+    color: var(--colorbg);
+ }
+
+ .subs p{
+    font-family: 'gliker';
+    padding-top: 15px;
+    font-size: 20px;
+    color: var(--colorbg);
+ }
+
+
+
+.buttonSubs{
+    padding: 5px;
+   border: 1px solid black;
+   border-radius: 1rem;
+   background-color: white;
+   font-family: 'gliker';
+   font-weight: 600;
+   color: var(--bg);
+   transition: 0.5s;
+}
+
+.buttonSubs:hover{
+    background-color: var(--colorbg);
+}
 
 
 .login h3{
@@ -233,22 +411,123 @@ main{
     justify-content: center;
     padding: 5px;
     border: 1px solid black;
+    border: none;
     border-radius: 1rem;
 
 }
 
 .login button{
-    margin-top: 5px;
-    width: 100px;
+    margin-top: 15px;
     border: 1px solid black;
     border-radius: 1rem;
     padding: 5px;
     transition: 0.5s;
-    font-family: 'gluten';
+    font-family: 'gliker';
+    font-weight: 600;
     font-size: 20px;
+    color: var(--bg);
+    cursor: pointer;
 }
+
 
 .login button:hover{
     background-color: var(--colorbg);
-    color: black;
+    
 }
+
+
+/* ========================about us===================== */
+
+#aboutUs{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAboutUs{
+    background-color: var(--bg);
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    border-radius: 1rem;
+    
+}
+
+.containerAboutUs h3 {
+    text-align: center;
+    font-family: 'gliker';
+    font-weight: 700;
+    font-size: 35px;
+    color: var(--colorbg);
+    padding: 10px;
+    
+}
+
+.containerAboutUs p{
+    text-align: center;
+    font-family: 'gliker';
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--colorbg);
+} 
+
+.containerAboutUs span{
+    font-size: 40px;
+    font-family: 'gliker';
+    font-weight: 700;
+
+}
+
+/* ============footer================ */
+
+#footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--secondary);
+    padding: 30px;
+}
+
+.Maps{
+    width: 500px;
+    height: 300px;
+    border: 0;
+}
+
+.footerContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconContainer{
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    color: white;
+}
+
+.iconContainer img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    color: white;
+}
+
+.iconContainer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iconContainer li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
