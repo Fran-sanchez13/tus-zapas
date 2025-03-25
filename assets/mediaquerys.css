@@ -1,0 +1,72 @@
+/* media querys (992) */
+
+@media (max-width: 993px) {
+    .navbar{
+        gap: 10px;
+    }
+    .crto-icon{
+        height: 45px;
+        margin-right: 0rem;
+    }
+    .navbar-list{
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        flex-direction: column;
+        align-items: start;
+        background-color: var(--bg);
+        border: 2px solid var(--colorbg);
+        border-top: 0;
+        border-radius: 0px 0px 1rem 1rem;
+        padding: 45px 30px;
+        z-index: 2;
+    }
+
+    .navbar-list a{
+        font-size: 28px;
+    }
+
+    .menu-label{
+        display: flex;
+        cursor: pointer;
+        order: 2;
+    }
+    .menu-label img{
+        width: 45px;
+        height: 45px;
+    }
+    
+    #menu-toggle:checked + .navbar-list{
+        display: flex;
+    }
+    
+    /* HERO */
+
+    body{
+        width: 100%;
+    }
+
+    .heroContent{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroContent img{
+        display: none;
+    }
+
+    .container-cards-shoes{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px){
+    #formLogin{
+        flex-direction: column;
+    }
+} 

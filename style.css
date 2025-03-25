@@ -13,6 +13,12 @@
     --colorbg: #E8E8B4;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color: var(--colorbg);
+}
+
 
 
 *{
@@ -38,7 +44,7 @@ header{
     width: 100%;
     position: fixed;
 
-    z-index: 5;
+    z-index: 1;
     background-color: var(--bg);
 }
 
@@ -90,7 +96,7 @@ header{
    
 }
 
-#cart-toggle{
+#cart-toggle, #menu-toggle, .menu-label{
     display: none;
 }
 
@@ -102,7 +108,7 @@ header{
     position: absolute;
     top: 100px;
     right: 0;
-    background-color: var(--secondary);
+    background-color: var(--bg);
     padding: 50px 30px;
     border-left: 1px solid var(--lettering2);
     height: calc(100vh - 100px);
@@ -207,14 +213,12 @@ header{
 
 /*====HERO====*/
 
-main{
-    background-color: var(--colorbg);
-    width: 100%;
-}
+
 
 
 .heroContent{
     display: flex;
+    width: 100%;
 }
 
 .heroContent h1{
