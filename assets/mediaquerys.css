@@ -117,5 +117,10 @@
 
     #footer{
         flex-direction: column;
-    }    
+    }
+    
+    .Maps{
+        width: 300px;
+        height: 200px;
+    }
 } 
