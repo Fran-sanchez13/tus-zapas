@@ -66,7 +66,56 @@
 }
 
 @media (max-width: 768px){
+   /*================= HERO ===========================*/
+
+    .heroContent h1{
+        font-size: 50px;
+    }
+
+   /*==================== SECTION SHOES ============*/
+
+
+    #shoesCards h2{
+        text-align: center;
+        font-size: 50px;
+    }   
+
+    .info-cardsShoes:hover{
+        transform: translate(0,0);
+    
+    }
+
+    .info-cardsShoes button:hover{
+        pointer-events: none;
+        transform: translate(0,0);
+    }
+
+    .info-cardsShoes{
+        width: 300px;
+    }
+
+    .info-cardsShoes h3{
+        text-align: center;
+    }
+
+   /*=============== LOGIN =================*/
+
+
     #formLogin{
         flex-direction: column;
     }
+
+    .login{
+        width: 300px;       
+    }
+
+    .subs{
+        width: 300px;
+    }
+
+    /*=============== FOOTER =================*/
+
+    #footer{
+        flex-direction: column;
+    }    
 } 
